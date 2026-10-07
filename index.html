@@ -1,28 +1,228 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>POR LOS PELOS · TPV</title><style>
-:root{--bg:#090b0d;--panel:#14171a;--gold:#e2b43f;--gold2:#f4cf70;--line:#30343a;--white:#f6f6f6;--muted:#aeb4ba}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif}.app{min-height:100vh;display:grid;grid-template-columns:88px 1fr}.side{background:#080a0c;border-right:1px solid #272b30;padding:18px 10px;display:flex;flex-direction:column;gap:10px}.side button{background:transparent;color:#ddd;border:0;border-radius:10px;padding:12px 5px;cursor:pointer;font-size:12px}.side button.active,.side button:hover{background:var(--gold);color:#111}.ico{font-size:22px;display:block;margin-bottom:5px}.main{min-width:0}.top{height:106px;padding:14px 24px;border-bottom:1px solid #282c31;display:flex;align-items:center;gap:24px}.logo{height:76px;width:76px;object-fit:cover;border-radius:12px}.brand{font-size:30px;font-weight:900;color:var(--gold);letter-spacing:1px}.details{font-size:13px;line-height:1.45;color:#eee}.date{margin-left:auto;text-align:right;color:#ddd}.mobile-nav{display:none}.content{display:grid;grid-template-columns:minmax(0,1fr) 430px;gap:12px;padding:12px}.panel{background:#f3f3f3;color:#111;border-radius:10px;overflow:hidden}.tabs{display:flex;gap:8px;padding:12px;background:#eee}.tabs button{flex:1;border:0;border-radius:9px;padding:12px;font-weight:700;font-size:16px;cursor:pointer}.tabs button.active{background:var(--gold);color:#111}.services{padding:12px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-height:calc(100vh - 142px);overflow:auto}.service{border:0;border-radius:10px;background:#151719;color:white;min-height:142px;padding:0;overflow:hidden;cursor:pointer;position:relative;text-align:left;box-shadow:0 2px 5px #0005}.service:hover{outline:3px solid var(--gold)}.service .photo{height:82px;background:linear-gradient(135deg,#333,#090909);display:flex;align-items:center;justify-content:center;font-size:38px}.service .info{padding:8px 10px}.service .name{font-weight:800;font-size:14px}.service .price{font-size:21px;font-weight:900;color:var(--gold2);margin-top:4px}.other{background:#ddd;color:#333;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800}.ticket{background:#fff;color:#111;border-radius:10px;min-height:calc(100vh - 142px);padding:16px;display:flex;flex-direction:column}.ticket h2{margin:0 0 14px;font-size:22px}.items{flex:1;overflow:auto}.item{display:grid;grid-template-columns:28px 1fr auto 24px;gap:8px;padding:12px 0;border-bottom:1px solid #ddd;align-items:center}.item .x{border:0;background:transparent;font-size:18px;cursor:pointer}.summary{border-top:1px solid #ddd;margin-top:10px;padding-top:12px}.sumrow{display:flex;justify-content:space-between;margin:7px 0}.grand{font-size:25px;font-weight:900;margin-top:10px}.payments{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.payments button{border:0;border-radius:9px;padding:15px 6px;font-weight:800;cursor:pointer}.cash{background:#35a853;color:white}.cardpay{background:#2b8be6;color:white}.bizum{background:#6b4be7;color:white}.cashq{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:8px}.cashq button{padding:8px;border:1px solid #ddd;background:#fafafa;border-radius:7px}.charge{width:100%;margin-top:10px;padding:15px;border:0;border-radius:9px;background:var(--gold);font-size:18px;font-weight:900;cursor:pointer}.bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}.bottom button{padding:11px;border:1px solid #ddd;background:#f7f7f7;border-radius:8px;cursor:pointer}.empty{height:100%;display:flex;align-items:center;justify-content:center;color:#888}.small{font-size:11px;color:#777}.ticketPreview{display:none}.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modalbox{background:white;color:#111;border-radius:12px;padding:20px;max-width:420px;width:100%}.modalbox input{width:100%;padding:12px;margin:8px 0}.modalbox button{padding:10px 14px;border:0;border-radius:8px;background:var(--gold);font-weight:800}.receipt{font-family:Arial,sans-serif}.receipt h2{text-align:center}.receipt .line{border-top:1px dashed #888;margin:10px 0}.receipt table{width:100%;border-collapse:collapse}.receipt td{padding:4px}.right{text-align:right}@media(max-width:1050px){.content{grid-template-columns:1fr}.ticket{min-height:auto}.services{max-height:none}}@media(max-width:700px){.app{grid-template-columns:1fr}.side{display:none}.mobile-nav{display:flex;padding:8px 12px;background:#111;position:sticky;top:0;z-index:20}.mobile-nav button{width:100%;padding:12px;border:2px solid var(--gold);border-radius:10px;background:var(--gold);color:#111;font-weight:900;font-size:16px}.top{height:auto;flex-wrap:wrap}.date{margin-left:0}.services{grid-template-columns:repeat(2,1fr)}.brand{font-size:22px}}
+:root{--bg:#090b0d;--panel:#14171a;--gold:#e2b43f;--gold2:#f4cf70;--line:#30343a;--white:#f6f6f6;--muted:#aeb4ba}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif}.app{min-height:100vh;display:grid;grid-template-columns:88px 1fr}.side{background:#080a0c;border-right:1px solid #272b30;padding:18px 10px;display:flex;flex-direction:column;gap:10px}.side button{background:transparent;color:#ddd;border:0;border-radius:10px;padding:12px 5px;cursor:pointer;font-size:12px}.side button.active,.side button:hover{background:var(--gold);color:#111}.ico{font-size:22px;display:block;margin-bottom:5px}.main{min-width:0}.top{height:106px;padding:14px 24px;border-bottom:1px solid #282c31;display:flex;align-items:center;gap:24px}.logo{height:76px;width:76px;object-fit:cover;border-radius:12px}.brand{font-size:30px;font-weight:900;color:var(--gold);letter-spacing:1px}.details{font-size:13px;line-height:1.45;color:#eee}.date{margin-left:auto;text-align:right;color:#ddd}.content{display:grid;grid-template-columns:minmax(0,1fr) 430px;gap:12px;padding:12px}.panel{background:#f3f3f3;color:#111;border-radius:10px;overflow:hidden}.tabs{display:flex;gap:8px;padding:12px;background:#eee}.tabs button{flex:1;border:0;border-radius:9px;padding:12px;font-weight:700;font-size:16px;cursor:pointer}.tabs button.active{background:var(--gold);color:#111}.services{padding:12px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-height:calc(100vh - 142px);overflow:auto}.service{border:0;border-radius:10px;background:#151719;color:white;min-height:142px;padding:0;overflow:hidden;cursor:pointer;position:relative;text-align:left;box-shadow:0 2px 5px #0005}.service:hover{outline:3px solid var(--gold)}.service .photo{height:82px;background:linear-gradient(135deg,#333,#090909);display:flex;align-items:center;justify-content:center;font-size:38px}.service .info{padding:8px 10px}.service .name{font-weight:800;font-size:14px}.service .price{font-size:21px;font-weight:900;color:var(--gold2);margin-top:4px}.other{background:#ddd;color:#333;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800}.ticket{background:#fff;color:#111;border-radius:10px;min-height:calc(100vh - 142px);padding:16px;display:flex;flex-direction:column}.ticket h2{margin:0 0 14px;font-size:22px}.items{flex:1;overflow:auto}.item{display:grid;grid-template-columns:28px 1fr auto 24px;gap:8px;padding:12px 0;border-bottom:1px solid #ddd;align-items:center}.item .x{border:0;background:transparent;font-size:18px;cursor:pointer}.summary{border-top:1px solid #ddd;margin-top:10px;padding-top:12px}.sumrow{display:flex;justify-content:space-between;margin:7px 0}.grand{font-size:25px;font-weight:900;margin-top:10px}.payments{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.payments button{border:0;border-radius:9px;padding:15px 6px;font-weight:800;cursor:pointer}.cash{background:#35a853;color:white}.cardpay{background:#2b8be6;color:white}.bizum{background:#6b4be7;color:white}.cashq{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:8px}.cashq button{padding:8px;border:1px solid #ddd;background:#fafafa;border-radius:7px}.charge{width:100%;margin-top:10px;padding:15px;border:0;border-radius:9px;background:var(--gold);font-size:18px;font-weight:900;cursor:pointer}.bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}.bottom button{padding:11px;border:1px solid #ddd;background:#f7f7f7;border-radius:8px;cursor:pointer}.empty{height:100%;display:flex;align-items:center;justify-content:center;color:#888}.small{font-size:11px;color:#777}.ticketPreview{display:none}.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modalbox{background:white;color:#111;border-radius:12px;padding:20px;max-width:420px;width:100%}.modalbox input{width:100%;padding:12px;margin:8px 0}.modalbox button{padding:10px 14px;border:0;border-radius:8px;background:var(--gold);font-weight:800}.receipt{font-family:Arial,sans-serif}.receipt h2{text-align:center}.receipt .line{border-top:1px dashed #888;margin:10px 0}.receipt table{width:100%;border-collapse:collapse}.receipt td{padding:4px}.right{text-align:right}
+.settings{position:fixed;inset:0;background:#000c;display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+.settings.show{display:flex}.settingsbox{background:#fff;color:#111;border-radius:14px;width:min(760px,100%);max-height:92vh;overflow:auto;padding:18px}
+.settingsbox h2{margin:0 0 14px}.setgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.setcard{border:1px solid #ddd;border-radius:10px;padding:12px}.setcard h3{margin:0 0 10px}
+.settings input,.settings select{width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;margin:4px 0}
+.settings button{border:0;border-radius:8px;padding:9px 12px;background:var(--gold);font-weight:800;cursor:pointer;margin:3px}
+.btn-danger{background:#e55353!important;color:#fff}.btn-dark{background:#222!important;color:#fff}
+.listrow{display:grid;grid-template-columns:1fr 1fr auto;gap:6px;align-items:center;border-top:1px solid #eee;padding:7px 0}
+.badge{font-size:12px;background:#eee;border-radius:20px;padding:4px 8px;display:inline-block}
+@media(max-width:650px){.setgrid{grid-template-columns:1fr}.listrow{grid-template-columns:1fr auto}}@media(max-width:1050px){.content{grid-template-columns:1fr}.ticket{min-height:auto}.services{max-height:none}}@media(max-width:700px){.app{grid-template-columns:1fr}.side{display:none}.top{height:auto;flex-wrap:wrap}.date{margin-left:0}.services{grid-template-columns:repeat(2,1fr)}.brand{font-size:22px}}
 @media print{body{background:white}.no-print{display:none!important}.modal{display:none!important}}
-</style></head><body><div class="app"><aside class="side"><button class="active"><span class="ico">✂️</span>Servicios</button><button><span class="ico">🧴</span>Productos</button><button><span class="ico">🛒</span>Ventas</button><button><span class="ico">🕘</span>Historial</button><button><span class="ico">👥</span>Clientes</button><button><span class="ico">💶</span>Caja</button><button onclick="openExpenses()"><span class="ico">🧾</span>Gastos</button><button><span class="ico">📊</span>Informes</button><button><span class="ico">⚙️</span>Config.</button></aside><main class="main"><header class="top"><img class="logo" src="logo.png"><div><div class="brand">POR LOS PELOS</div><div class="details">Mohamed Issam Bouayad Chaara · NIF: 10215542T<br>Tel: 910 460 300 · Email: Bigbarber2026@gmail.com</div></div><div class="date"><b id="date"></b><br><span id="time"></span></div></header><div class="mobile-nav"><button onclick="openExpenses()">🧾 Gastos</button></div><div class="content"><section class="panel"><div class="tabs"><button class="active">Barbería</button><button>Estética</button><button>Productos</button><button>Otros</button></div><div class="services" id="services"></div></section><section class="ticket"><h2>🛒 Ticket actual</h2><div id="items" class="items"></div><div class="summary"><div class="sumrow"><span>Base imponible</span><b id="base">0,00 €</b></div><div class="sumrow"><span>IVA (21%)</span><b id="iva">0,00 €</b></div><div class="sumrow grand"><span>Total</span><span id="total">0,00 €</span></div><div class="payments"><button class="cash" onclick="setPay('Efectivo')">💵<br>Efectivo</button><button class="cardpay" onclick="setPay('Tarjeta')">💳<br>Tarjeta</button><button class="bizum" onclick="setPay('Bizum')">％<br>Bizum</button></div><div class="cashq"><button onclick="addQuick(5)">5 €</button><button onclick="addQuick(10)">10 €</button><button onclick="addQuick(20)">20 €</button><button onclick="addQuick(50)">50 €</button><button onclick="addQuick(100)">100 €</button></div><button class="charge" onclick="charge()">💳 Cobrar <span id="chargeTotal">0,00 €</span></button><div class="bottom"><button onclick="clearSale()">🗑 Limpiar</button><button onclick="makeTicket()">🖨 Imprimir Ticket</button><button onclick="saveSale()">💾 Guardar</button></div><div class="small" style="margin-top:8px">Precios configurados con IVA incluido. Al tocar un servicio se añade directamente al ticket.</div></div></section></div></main></div><div id="expenseModal" class="modal"><div class="modalbox" style="max-width:900px;width:100%;max-height:90vh;overflow:auto"><h2 style="margin-top:0">🧾 GASTOS DEL DÍA</h2><p class="small">Registra aquí todos los gastos realizados en el día. Los datos quedan guardados en el sistema.</p><div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:8px"><input id="expName" placeholder="Concepto (alquiler, productos, limpieza...)"/><input id="expAmount" type="number" step="0.01" min="0" placeholder="Importe (€)"/><select id="expPay" style="padding:12px;border:1px solid #ddd;border-radius:8px"><option>Efectivo</option><option>Tarjeta</option><option>Bizum</option><option>Transferencia</option><option>Otros</option></select><input id="expDate" type="date"/></div><button style="margin-top:10px;width:100%;padding:13px" onclick="addExpense()">＋ AÑADIR GASTO</button><div id="expenseList" style="margin-top:14px;max-height:360px;overflow:auto"></div><div id="expenseTotal" style="font-size:22px;font-weight:900;text-align:right;margin-top:12px;padding-top:10px;border-top:2px solid #ddd"></div><div style="display:flex;gap:8px;margin-top:12px"><button onclick="closeExpenses()">Cerrar</button><button onclick="printExpenses()">🖨 Imprimir gastos</button></div></div></div><div id="modal" class="modal"><div class="modalbox"><h3>Ticket · POR LOS PELOS</h3><div id="receipt"></div><div style="display:flex;gap:8px;margin-top:12px"><button onclick="window.print()">Imprimir</button><button onclick="closeModal()">Cerrar</button></div></div></div>
-<script>const VAT=.21;let payment='Efectivo';let sale=[];const services=[['Corte caballero',10.99,'💈'],['Arreglo barba',6.99,'🧔'],['Corte + barba',16.99,'✂️'],['Corte niño',8.99,'👦'],['Corte jubilado',7.99,'👴'],['Afeitado clásico',9.99,'🪒'],['Dibujo',3.99,'🎨'],['Cejas',4.99,'👁️'],['Tratamiento anticaída',24.99,'💆'],['Tinte caballero',16.99,'🎨'],['Tinte barba',9.99,'🧔'],['Mechas',29.99,'✨'],['Lavado y peinar',4.99,'🫧']];
+</style></head><body><div class="app"><aside class="side"><button class="active"><span class="ico">✂️</span>Servicios</button><button><span class="ico">🧴</span>Productos</button><button><span class="ico">🛒</span>Ventas</button><button><span class="ico">🕘</span>Historial</button><button><span class="ico">👥</span>Clientes</button><button><span class="ico">💶</span>Caja</button><button><span class="ico">📊</span>Informes</button><button onclick="openSettings()"><span class="ico">⚙️</span>Config.</button></aside><main class="main"><header class="top"><img class="logo" src="logo.png"><div><div class="brand">POR LOS PELOS</div><div class="details">Mohamed Issam Bouayad Chaara · NIF: 10215542T<br>Tel: 910 460 300 · Email: Bigbarber2026@gmail.com</div></div><div class="date"><label style="font-size:12px">Sucursal
+<select id="branchSelect" onchange="changeBranch()" style="padding:6px;border-radius:7px">
+<option>Pacífico</option><option>Alto</option></select></label><br><b id="date"></b><br><span id="time"></span></div></header><div class="content"><section class="panel"><div class="tabs"><button class="active">Barbería</button><button>Estética</button><button>Productos</button><button>Otros</button></div><div class="services" id="services"></div></section><section class="ticket"><h2>🛒 Ticket actual</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
+<label style="font-size:12px">Empleado
+<select id="employeeSelect" style="width:100%;padding:9px;border:1px solid #ddd;border-radius:8px"></select></label>
+<label style="font-size:12px">Sucursal
+<select id="ticketBranch" onchange="setTicketBranch()" style="width:100%;padding:9px;border:1px solid #ddd;border-radius:8px">
+<option>Pacífico</option><option>Alto</option></select></label>
+</div>
+<div id="items" class="items"></div><div class="summary"><div class="sumrow"><span>Base imponible</span><b id="base">0,00 €</b></div><div class="sumrow"><span>IVA (21%)</span><b id="iva">0,00 €</b></div><div class="sumrow grand"><span>Total</span><span id="total">0,00 €</span></div><div class="payments"><button class="cash" onclick="setPay('Efectivo')">💵<br>Efectivo</button><button class="cardpay" onclick="setPay('Tarjeta')">💳<br>Tarjeta</button><button class="bizum" onclick="setPay('Bizum')">％<br>Bizum</button></div><div class="cashq"><button onclick="addQuick(5)">5 €</button><button onclick="addQuick(10)">10 €</button><button onclick="addQuick(20)">20 €</button><button onclick="addQuick(50)">50 €</button><button onclick="addQuick(100)">100 €</button></div><button class="charge" onclick="charge()">💳 Cobrar <span id="chargeTotal">0,00 €</span></button><div class="bottom"><button onclick="clearSale()">🗑 Limpiar</button><button onclick="makeTicket()">🖨 Imprimir Ticket</button><button onclick="saveSale()">💾 Guardar</button></div><div class="small" style="margin-top:8px">Precios configurados con IVA incluido. Al tocar un servicio se añade directamente al ticket.</div></div></section></div></main></div>
+<div id="settings" class="settings">
+  <div class="settingsbox">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <h2>⚙️ Configuración de POR LOS PELOS</h2>
+      <button class="btn-dark" onclick="closeSettings()">Cerrar</button>
+    </div>
+    <div class="setgrid">
+      <div class="setcard">
+        <h3>🏪 Sucursales</h3>
+        <p><b>Pacífico</b> <span class="badge">Sucursal 1</span></p>
+        <p><b>Alto</b> <span class="badge">Sucursal 2</span></p>
+        <small>Estas son las dos sucursales disponibles.</small>
+      </div>
+
+      <div class="setcard">
+        <h3>🏢 Datos del negocio</h3>
+        <input id="cfgName" placeholder="Nombre del negocio">
+        <input id="cfgOwner" placeholder="Propietario">
+        <input id="cfgNif" placeholder="NIF">
+        <input id="cfgPhone" placeholder="Teléfono">
+        <input id="cfgEmail" placeholder="Email">
+        <button onclick="saveBusiness()">Guardar datos</button>
+      </div>
+
+      <div class="setcard">
+        <h3>👥 Añadir empleado</h3>
+        <input id="empName" placeholder="Nombre completo">
+        <input id="empJob" placeholder="Puesto (barbero, estética...)">
+        <select id="empBranch"><option>Pacífico</option><option>Alto</option></select>
+        <input id="empPhone" placeholder="Teléfono (opcional)">
+        <input id="empSalary" type="number" step="0.01" placeholder="Salario (opcional)">
+        <button onclick="addEmployee()">+ Añadir empleado</button>
+        <div id="employeeList"></div>
+      </div>
+
+      <div class="setcard">
+        <h3>💈 Servicios y precios</h3>
+        <input id="svcName" placeholder="Nombre del servicio">
+        <input id="svcPrice" type="number" step="0.01" placeholder="Precio con IVA incluido">
+        <input id="svcIcon" placeholder="Emoji (opcional)" value="✂️">
+        <button onclick="addServiceConfig()">+ Añadir servicio</button>
+        <div id="serviceList"></div>
+      </div>
+
+      <div class="setcard">
+        <h3>💶 IVA</h3>
+        <input id="cfgVat" type="number" step="0.01" min="0" max="100" placeholder="IVA %">
+        <button onclick="saveVat()">Guardar IVA</button>
+      </div>
+
+      <div class="setcard">
+        <h3>🔐 Seguridad</h3>
+        <input id="oldPass" type="password" placeholder="Contraseña actual">
+        <input id="newPass" type="password" placeholder="Nueva contraseña">
+        <button onclick="changePassword()">Cambiar contraseña</button>
+        <small>La contraseña inicial es <b>1234</b>.</small>
+      </div>
+
+      <div class="setcard">
+        <h3>💳 Métodos de pago</h3>
+        <label><input type="checkbox" id="payCash"> Efectivo</label><br>
+        <label><input type="checkbox" id="payCard"> Tarjeta</label><br>
+        <label><input type="checkbox" id="payBizum"> Bizum</label><br>
+        <button onclick="savePayments()">Guardar métodos</button>
+      </div>
+
+      <div class="setcard">
+        <h3>💾 Copia de seguridad</h3>
+        <button onclick="exportData()">Exportar configuración</button>
+        <button class="btn-dark" onclick="document.getElementById('importFile').click()">Importar configuración</button>
+        <input id="importFile" type="file" accept=".json" style="display:none" onchange="importData(event)">
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal" class="modal"><div class="modalbox"><h3>Ticket · POR LOS PELOS</h3><div id="receipt"></div><div style="display:flex;gap:8px;margin-top:12px"><button onclick="window.print()">Imprimir</button><button onclick="closeModal()">Cerrar</button></div></div></div>
+<script>
+const DEFAULT_SERVICES=[
+['Corte caballero',10.99,'💈'],['Arreglo barba',6.99,'🧔'],['Corte + barba',16.99,'✂️'],
+['Corte niño',8.99,'👦'],['Corte jubilado',7.99,'👴'],['Afeitado clásico',9.99,'🪒'],
+['Dibujo',3.99,'🎨'],['Cejas',4.99,'👁️'],['Tratamiento anticaída',24.99,'💆'],
+['Tinte caballero',16.99,'🎨'],['Tinte barba',9.99,'🧔'],['Mechas',29.99,'✨'],
+['Color',24.99,'🌈'],['Lavado y peinar',4.99,'🫧']
+];
+const VAT_DEFAULT=.21;
+let config=JSON.parse(localStorage.getItem('porLosPelosConfig')||'null')||{
+ name:'POR LOS PELOS',owner:'Mohamed Issam Bouayad Chaara',nif:'10215542T',
+ phone:'910 460 300',email:'Bigbarber2026@gmail.com',vat:21,password:'1234',
+ branches:['Pacífico','Alto'],
+ employees:[], services:DEFAULT_SERVICES,
+ payments:{Efectivo:true,Tarjeta:true,Bizum:true}
+};
+if(!config.services?.length)config.services=DEFAULT_SERVICES;
+let services=config.services;
+let payment='Efectivo',sale=[];
+let branch=localStorage.getItem('porLosPelosBranch')||'Pacífico';
+let ticketBranch=branch;
+let currentEmployee='';
+const VAT=()=>Number(config.vat||21)/100;
 const fmt=n=>n.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+' €';
-function renderServices(){document.getElementById('services').innerHTML=services.map((s,i)=>`<button class="service" onclick="addService(${i})"><div class="photo">${s[2]}</div><div class="info"><div class="name">${s[0]}</div><div class="price">${fmt(s[1])}</div></div></button>`).join('')+`<button class="service other" onclick="otherService()">＋<br>OTRO SERVICIO</button>`}
-function addService(i){const s=services[i];sale.push({name:s[0],price:s[1],qty:1,pay:payment});render()}
+function persist(){config.services=services;localStorage.setItem('porLosPelosConfig',JSON.stringify(config));}
+function renderServices(){
+ document.getElementById('services').innerHTML=services.map((s,i)=>`<button class="service" onclick="addService(${i})"><div class="photo">${s[2]||'✂️'}</div><div class="info"><div class="name">${s[0]}</div><div class="price">${fmt(Number(s[1]))}</div></div></button>`).join('')+
+ `<button class="service other" onclick="otherService()">＋<br>OTRO SERVICIO</button>`;
+}
+function addService(i){const s=services[i];sale.push({name:s[0],price:Number(s[1]),qty:1,pay:payment});render()}
 function otherService(){const n=prompt('Nombre del servicio');if(!n)return;const p=parseFloat(prompt('Precio con IVA incluido (€)')||'0');if(p>0)sale.push({name:n,price:p,qty:1,pay:payment});render()}
 function removeItem(i){sale.splice(i,1);render()}
-function setPay(p){payment=p;sale.forEach(x=>x.pay=p);render()}
-function addQuick(v){if(sale.length) sale[sale.length-1].cash=v;}
-function render(){const items=document.getElementById('items');if(!sale.length){items.innerHTML='<div class="empty">Toca un precio para añadirlo al ticket</div>'}else{items.innerHTML=sale.map((x,i)=>`<div class="item"><span>${x.qty}</span><span><b>${x.name}</b><br><small>${x.pay}</small></span><b>${fmt(x.price*x.qty)}</b><button class="x" onclick="removeItem(${i})">×</button></div>`).join('')}const total=sale.reduce((a,x)=>a+x.price*x.qty,0),base=total/(1+VAT),iva=total-base;document.getElementById('base').textContent=fmt(base);document.getElementById('iva').textContent=fmt(iva);document.getElementById('total').textContent=fmt(total);document.getElementById('chargeTotal').textContent=fmt(total)}
-function receiptHTML(){const total=sale.reduce((a,x)=>a+x.price*x.qty,0),base=total/(1+VAT),iva=total-base,date=new Date().toLocaleString('es-ES');return `<div class="receipt"><h2>POR LOS PELOS</h2><div style="text-align:center;font-size:12px">Mohamed Issam Bouayad Chaara<br>NIF: 10215542T<br>910 460 300<br>Bigbarber2026@gmail.com</div><div class="line"></div><div style="font-size:12px">Fecha: ${date}</div><table>${sale.map(x=>`<tr><td>${x.name} × ${x.qty}</td><td class="right">${fmt(x.price*x.qty)}</td></tr>`).join('')}</table><div class="line"></div><table><tr><td>Base imponible</td><td class="right">${fmt(base)}</td></tr><tr><td>IVA 21%</td><td class="right">${fmt(iva)}</td></tr><tr><td><b>TOTAL</b></td><td class="right"><b>${fmt(total)}</b></td></tr></table><div style="text-align:center;margin-top:10px;font-size:12px">Pago: ${payment}<br>Gracias por su visita</div></div>`}
+function setPay(p){if(config.payments[p]===false)return alert('Este método de pago está desactivado en Config.');payment=p;sale.forEach(x=>x.pay=p);render()}
+function addQuick(v){if(sale.length)sale[sale.length-1].cash=v}
+function render(){
+ const items=document.getElementById('items');
+ if(!sale.length)items.innerHTML='<div class="empty">Toca un precio para añadirlo al ticket</div>';
+ else items.innerHTML=sale.map((x,i)=>`<div class="item"><span>${x.qty}</span><span><b>${x.name}</b><br><small>${x.pay}</small></span><b>${fmt(x.price*x.qty)}</b><button class="x" onclick="removeItem(${i})">×</button></div>`).join('');
+ const total=sale.reduce((a,x)=>a+x.price*x.qty,0),base=total/(1+VAT()),iva=total-base;
+ document.getElementById('base').textContent=fmt(base);document.getElementById('iva').textContent=fmt(iva);
+ document.getElementById('total').textContent=fmt(total);document.getElementById('chargeTotal').textContent=fmt(total);
+ renderEmployees();
+}
+function renderEmployees(){
+ const sel=document.getElementById('employeeSelect');if(!sel)return;
+ const list=config.employees.filter(e=>e.branch===ticketBranch&&e.active!==false);
+ sel.innerHTML='<option value="">Seleccionar empleado</option>'+list.map((e,i)=>`<option value="${e.name}">${e.name} · ${e.job||''}</option>`).join('');
+ if(currentEmployee)sel.value=currentEmployee;
+}
+function changeBranch(){
+ branch=document.getElementById('branchSelect').value;ticketBranch=branch;
+ document.getElementById('ticketBranch').value=branch;localStorage.setItem('porLosPelosBranch',branch);renderEmployees();
+}
+function setTicketBranch(){ticketBranch=document.getElementById('ticketBranch').value;currentEmployee='';renderEmployees()}
+document.addEventListener('change',e=>{if(e.target.id==='employeeSelect')currentEmployee=e.target.value});
+function receiptHTML(){
+ const total=sale.reduce((a,x)=>a+x.price*x.qty,0),base=total/(1+VAT()),iva=total-base,date=new Date().toLocaleString('es-ES');
+ return `<div class="receipt"><h2>${config.name}</h2><div style="text-align:center;font-size:12px">${config.owner}<br>NIF: ${config.nif}<br>${config.phone}<br>${config.email}</div><div class="line"></div><div style="font-size:12px">Fecha: ${date}<br>Sucursal: ${ticketBranch}${currentEmployee?'<br>Empleado: '+currentEmployee:''}</div><table>${sale.map(x=>`<tr><td>${x.name} × ${x.qty}</td><td class="right">${fmt(x.price*x.qty)}</td></tr>`).join('')}</table><div class="line"></div><table><tr><td>Base imponible</td><td class="right">${fmt(base)}</td></tr><tr><td>IVA ${config.vat}%</td><td class="right">${fmt(iva)}</td></tr><tr><td><b>TOTAL</b></td><td class="right"><b>${fmt(total)}</b></td></tr></table><div style="text-align:center;margin-top:10px;font-size:12px">Pago: ${payment}<br>Gracias por su visita</div></div>`;
+}
 function makeTicket(){if(!sale.length)return alert('Añade un servicio tocando su precio.');document.getElementById('receipt').innerHTML=receiptHTML();document.getElementById('modal').classList.add('show')}
 function closeModal(){document.getElementById('modal').classList.remove('show')}
 function charge(){if(!sale.length)return alert('Añade un servicio tocando su precio.');makeTicket()}
 function clearSale(){sale=[];render()}
-function saveSale(){if(!sale.length)return alert('No hay venta para guardar.');const saved=JSON.parse(localStorage.getItem('porLosPelosVentas')||'[]');saved.push({date:new Date().toISOString(),payment,total:sale.reduce((a,x)=>a+x.price*x.qty,0),items:sale});localStorage.setItem('porLosPelosVentas',JSON.stringify(saved));alert('Venta guardada correctamente.')}
-
-function openExpenses(){document.getElementById('expDate').value=new Date().toISOString().slice(0,10);renderExpenses();document.getElementById('expenseModal').classList.add('show')}
-function closeExpenses(){document.getElementById('expenseModal').classList.remove('show')}
-function getExpenses(){return JSON.parse(localStorage.getItem('porLosPelosGastos')||'[]')}
-function addExpense(){const name=document.getElementById('expName').value.trim(),amount=parseFloat(document.getElementById('expAmount').value||'0'),pay=document.getElementById('expPay').value,date=document.getElementById('expDate').value||new Date().toISOString().slice(0,10);if(!name||!(amount>0))return alert('Indica el concepto y un importe válido.');const e=getExpenses();e.push({id:Date.now(),name,amount,pay,date});localStorage.setItem('porLosPelosGastos',JSON.stringify(e));document.getElementById('expName').value='';document.getElementById('expAmount').value='';renderExpenses()}
-function deleteExpense(id){const e=getExpenses().filter(x=>x.id!==id);localStorage.setItem('porLosPelosGastos',JSON.stringify(e));renderExpenses()}
-function renderExpenses(){const date=document.getElementById('expDate').value||new Date().toISOString().slice(0,10),e=getExpenses().filter(x=>x.date===date),total=e.reduce((a,x)=>a+x.amount,0);document.getElementById('expenseList').innerHTML=e.length?e.map(x=>`<div style="display:grid;grid-template-columns:1fr auto auto 30px;gap:8px;padding:10px 0;border-bottom:1px solid #ddd"><span><b>${x.name}</b><br><small>${x.pay}</small></span><b>${fmt(x.amount)}</b><span style="font-size:12px;color:#777">${x.date}</span><button onclick="deleteExpense(${x.id})" style="border:0;background:transparent">×</button></div>`).join(''):'<div class="empty" style="height:80px">No hay gastos registrados para este día.</div>';document.getElementById('expenseTotal').textContent='Total gastos del día: '+fmt(total)}
-function printExpenses(){const date=document.getElementById('expDate').value||new Date().toISOString().slice(0,10),e=getExpenses().filter(x=>x.date===date),total=e.reduce((a,x)=>a+x.amount,0),w=window.open('','_blank');w.document.write(`<html><head><title>Gastos ${date}</title></head><body><h2>POR LOS PELOS — Gastos</h2><p>Fecha: ${date}</p><table border="1" cellspacing="0" cellpadding="7"><tr><th>Concepto</th><th>Pago</th><th>Importe</th></tr>${e.map(x=>`<tr><td>${x.name}</td><td>${x.pay}</td><td>${fmt(x.amount)}</td></tr>`).join('')}<tr><th colspan="2">TOTAL</th><th>${fmt(total)}</th></tr></table><script>window.print()<\/script></body></html>`);w.document.close()}
-function updateClock(){const d=new Date();document.getElementById('date').textContent=d.toLocaleDateString('es-ES');document.getElementById('time').textContent=d.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'})}setInterval(updateClock,1000);updateClock();renderServices();render();</script></body></html>
+function saveSale(){
+ if(!sale.length)return alert('No hay venta para guardar.');
+ const saved=JSON.parse(localStorage.getItem('porLosPelosVentas')||'[]');
+ saved.push({date:new Date().toISOString(),payment,total:sale.reduce((a,x)=>a+x.price*x.qty,0),branch:ticketBranch,employee:currentEmployee,items:sale});
+ localStorage.setItem('porLosPelosVentas',JSON.stringify(saved));alert('Venta guardada correctamente.')
+}
+function openSettings(){
+ const p=prompt('Introduce la contraseña del administrador:');
+ if(p!==config.password)return alert('Contraseña incorrecta.');
+ fillSettings();document.getElementById('settings').classList.add('show');
+}
+function closeSettings(){document.getElementById('settings').classList.remove('show')}
+function fillSettings(){
+ cfgName.value=config.name;cfgOwner.value=config.owner;cfgNif.value=config.nif;cfgPhone.value=config.phone;cfgEmail.value=config.email;
+ cfgVat.value=config.vat;payCash.checked=config.payments.Efectivo!==false;payCard.checked=config.payments.Tarjeta!==false;payBizum.checked=config.payments.Bizum!==false;
+ renderEmployeeList();renderServiceList();
+}
+function saveBusiness(){
+ config.name=cfgName.value.trim()||config.name;config.owner=cfgOwner.value.trim()||config.owner;config.nif=cfgNif.value.trim()||config.nif;
+ config.phone=cfgPhone.value.trim()||config.phone;config.email=cfgEmail.value.trim()||config.email;persist();location.reload();
+}
+function saveVat(){const v=Number(cfgVat.value);if(isNaN(v)||v<0||v>100)return alert('IVA no válido.');config.vat=v;persist();render();alert('IVA guardado.')}
+function addEmployee(){
+ const name=empName.value.trim();if(!name)return alert('Escribe el nombre del empleado.');
+ config.employees.push({name,job:empJob.value.trim(),branch:empBranch.value,phone:empPhone.value.trim(),salary:Number(empSalary.value)||0,active:true});
+ persist();empName.value='';empJob.value='';empPhone.value='';empSalary.value='';renderEmployeeList();renderEmployees();alert('Empleado añadido.');
+}
+function renderEmployeeList(){
+ employeeList.innerHTML=config.employees.length?config.employees.map((e,i)=>`<div class="listrow"><span><b>${e.name}</b><br><small>${e.job||'Empleado'} · ${e.branch}</small></span><span>${e.salary?fmt(e.salary):''}</span><button class="btn-danger" onclick="deleteEmployee(${i})">Eliminar</button></div>`).join(''):'<small>No hay empleados registrados.</small>';
+}
+function deleteEmployee(i){if(confirm('¿Eliminar este empleado?')){config.employees.splice(i,1);persist();renderEmployeeList();renderEmployees()}}
+function addServiceConfig(){
+ const n=svcName.value.trim(),p=Number(svcPrice.value),ic=svcIcon.value.trim()||'✂️';
+ if(!n||!(p>0))return alert('Indica nombre y precio.');
+ services.push([n,p,ic]);persist();renderServices();renderServiceList();svcName.value='';svcPrice.value='';alert('Servicio añadido.')
+}
+function renderServiceList(){
+ serviceList.innerHTML=services.map((s,i)=>`<div class="listrow"><span>${s[2]||'✂️'} <b>${s[0]}</b></span><span>${fmt(Number(s[1]))}</span><button class="btn-danger" onclick="deleteService(${i})">Eliminar</button></div>`).join('');
+}
+function deleteService(i){if(confirm('¿Eliminar este servicio?')){services.splice(i,1);persist();renderServices();renderServiceList()}}
+function changePassword(){
+ if(oldPass.value!==config.password)return alert('Contraseña actual incorrecta.');
+ if(!newPass.value)return alert('Escribe una nueva contraseña.');
+ config.password=newPass.value;persist();oldPass.value='';newPass.value='';alert('Contraseña cambiada.')
+}
+function savePayments(){
+ config.payments={Efectivo:payCash.checked,Tarjeta:payCard.checked,Bizum:payBizum.checked};persist();alert('Métodos de pago guardados.')
+}
+function exportData(){
+ const blob=new Blob([JSON.stringify(config,null,2)],{type:'application/json'}),a=document.createElement('a');
+ a.href=URL.createObjectURL(blob);a.download='por-los-pelos-config.json';a.click();URL.revokeObjectURL(a.href);
+}
+function importData(ev){
+ const f=ev.target.files[0];if(!f)return;const r=new FileReader();
+ r.onload=()=>{try{const d=JSON.parse(r.result);if(!d.branches||!d.employees||!d.services)throw 0;config=d;services=config.services;persist();alert('Configuración importada.');location.reload()}catch(e){alert('Archivo de configuración no válido.')}};
+ r.readAsText(f);
+}
+function updateClock(){const d=new Date();date.textContent=d.toLocaleDateString('es-ES');time.textContent=d.toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'})}
+setInterval(updateClock,1000);updateClock();
+document.getElementById('branchSelect').value=branch;document.getElementById('ticketBranch').value=branch;
+renderServices();render();
+</script><script>
+document.querySelector('.brand').textContent=config.name;
+document.querySelector('.details').innerHTML=`${config.owner} · NIF: ${config.nif}<br>Tel: ${config.phone} · Email: ${config.email}`;
+</script></body></html>
